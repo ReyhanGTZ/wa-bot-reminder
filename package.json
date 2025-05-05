@@ -5,7 +5,7 @@
   "main": "scheduler.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "scheduler.js"
+    "start": "node scheduler.js"
   },
   "author": "MIT",
   "license": "ISC",
