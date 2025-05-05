@@ -49,16 +49,18 @@ client.on('ready', async () => {
                 const mentionId = `${item.phone}@c.us`;
                 const chat = await client.getChatById(groupId);
                 const contact = await client.getContactById(mentionId);
-
+        
                 await chat.sendMessage(`🎙️ Hari ini jadwal podcast *${item.show}*\nHai @${item.phone}, waktunya UPLOAD!`, {
                     mentions: [contact]
                 });
-
+        
                 console.log(`Reminder sent to ${item.person} (${item.day} at ${item.time})`);
             } catch (err) {
                 console.error(`Error on ${item.day} for ${item.person}:`, err.message);
             }
-        });
+        }, {
+            timezone: "Asia/Jakarta"
+        });        
     }
 });
 
