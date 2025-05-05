@@ -69,6 +69,11 @@ client.on('message', async message => {
         message.reply('pong');
     }
 
+    if(message.body === '!status')
+    {
+        message.reply('Status Deployed! Server TimeZone : UTC , Current Time Zone : Asia/Jakarta');
+    }
+
     // (Opsional) Log ID grup jika dikirim dari grup
     if (message.from.endsWith('@g.us')) {
         console.log(`Grup ID: ${message.from}`);
